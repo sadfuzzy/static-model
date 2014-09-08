@@ -1,5 +1,5 @@
-require('spec_helper')
+require 'spec_helper'
 
 describe StaticModel do
-  it_should_behave_like 'StaticModel'
+  it_behaves_like 'StaticModel'
 end

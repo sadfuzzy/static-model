@@ -63,14 +63,13 @@
 #         request.post? && @user_lookup.valid?
 #       end
 #     end
-class StaticModel
-  # Includes.
-  include(ActiveModel::Naming)
-  include(ActiveModel::Conversion)
-  include(ActiveModel::Validations)
-  include(ActiveModel::Translation)
+require 'active_model'
 
-  # Methods.
+class StaticModel
+  include ActiveModel::Naming
+  include ActiveModel::Conversion
+  include ActiveModel::Validations
+  include ActiveModel::Translation
 
   # Creates an instance of the model with its attributes initialized from a hash, just like you can do with ActiveRecord models.
   #

@@ -1,4 +1,8 @@
-shared_examples 'StaticModel' do
+require 'static_model/spec'
+
+module StaticModel
+  extend RSpec::SharedContext
+
   describe '#initialize' do
     it 'sets the attributes' do
       expect_any_instance_of(described_class).to receive(:attribute_1=).with(1)
